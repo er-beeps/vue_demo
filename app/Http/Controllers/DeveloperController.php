@@ -39,9 +39,9 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
-        $developer = $request->isMethod('put') ? Developer::findOrFail($request->developer_id) : new Developer;
+        $developer = $request->isMethod('put') ? Developer::findOrFail($request->developer_id) : new Developer();
 
-        $developer->id  = $request->input('developer_id');
+        // $developer->id  = $request->input('developer_id');
         $developer->first_name  = $request->input('first_name');
         $developer->last_name  = $request->input('last_name'); 
         $developer->email  = $request->input('email');

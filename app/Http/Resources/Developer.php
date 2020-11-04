@@ -14,6 +14,7 @@ class Developer extends JsonResource
      */
     public function toArray($request)
     {
+        // dd($this);
         // return parent::toArray($request);
 
         return [
